@@ -1,0 +1,16 @@
+$colors:(
+blue: #c0392b,
+black: #2980b9
+);
+
+@function style-variation($style) {
+	@if map-has-key($colors, $style) {
+		@return map-get($colors, $style);
+	}
+	
+	@error "Invalid color :'#{$style}'";
+}
+
+.container {
+style: style-variation(white);
+}

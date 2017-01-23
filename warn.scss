@@ -1,0 +1,5 @@
+$main-color: #bdc3c7;
+
+.container{
+@warn "hey" darken($main-color,30%);
+}

@@ -1,0 +1,11 @@
+h2 {
+color: blue;
+background-color: yellow;
+@at-root {
+	.style {
+		font-size: 20px;
+		font-style: bold;
+		color: violet;
+		}
+	}
+}

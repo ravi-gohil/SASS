@@ -1,0 +1,81 @@
+	
+@mixin border-redius($redius){
+	-webkit-border-redius : $redius;
+	-moz-border-redius: $redius;
+	-ms-border-redius : $redius;
+	border-redius: $redius;
+}
+@mixin style {
+	h2 ,
+	h3, p {
+	background-color: orange;
+	}
+	 
+}
+
+@include style;
+
+@mixin linear-gradient($direction, $gradient...){
+background-color:nth($gradient,1);
+background-image : linear-gradient($direction,$gradient...);
+}
+
+.selector {
+	@include linear-gradient(to right, magenta, red, orange, yellow, green,blue, purple);
+}
+
+@mixin element{
+@content;
+}
+
+@include element{
+	.block {
+		color:blue;
+	}
+}
+h2 {
+@include border-redius(10px);
+color:if(1 + 1 == 2, green, red);
+}
+
+p {
+@if 1 + 1 == 2 {border : 1px solid;}
+@if 5 < 3 {border : 2px dotted;}
+@if null {border : 3px double;}
+}
+
+$type : monster;
+
+h3  {
+@if $type == ocean {
+color: blue;}
+@else if $type == matador {
+color: red;}
+@else if $type == monster {
+color: green;}
+@else {
+color : black;}
+}
+
+@for $i from 1 through 4 {
+.p#{$i} {padding-left:$i*10px;}
+}
+
+@each $color in "pink", "violet", "yellow", "blue" {
+.p_#{$color} {
+	background-color: #{$color};}
+}
+
+@each $color, $border in (pink, solid),
+				(violet, dotted),
+				(yellow, double),
+				(blue, dotted){
+				.#{$color}{
+					background-color: $color;
+					border: $border;
+					}
+				}
+				
+@for $i from 1 to 4{
+	.p#{$i} {padding-left:$i*10px;}
+	}

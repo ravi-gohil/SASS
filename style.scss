@@ -1,0 +1,66 @@
+
+
+h3 {
+	color: #DE5E85;
+}
+
+$font-stack: hevetica, sans-serif;
+$primary-color: pink;
+body {
+	font:100% $font-stack;
+	color: $primary-color;
+}
+.clr {
+	color: green !important;
+	font-size: (1600px/24px);
+	opacity: random(4)/5;
+	padding-right: 20px/4px+3px;
+}
+p,h2 { 
+@extend .clr;
+color: $primary-color;
+
+}
+
+@mixin font-fl($font){
+	&:after {
+		@if(type-of($font) == string){
+			content:'My font is: #{$font}.';
+		}@else{
+			content:'sorry, the argument #{$font} is a #{type-of(#font)}';
+		}		
+	}
+}
+
+h1 {
+	color: #AF80ED;
+	@include font-fl(sans-serif);
+}
+
+$list-map: (success: lightgreen, alert: red, info: lightblue); 
+@mixin button-state($btn-state) {  
+	@if(length($list-map)>2 or length($list-map)<5){
+			background-color: map-get($list-map,$btn-state);
+		}
+	}	
+	
+.btn {
+	@include button-state(success);
+}
+
+nav {
+	ul {
+		@extend .clr;
+		margin: 0;
+		padding: 0;
+		list-style:none;
+	}
+	li {
+		display:inline-block;
+	}
+	a {
+		display: block;
+		padding:0;
+		text-decoration: none;
+	}
+}

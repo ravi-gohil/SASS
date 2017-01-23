@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,EAAG;EACH,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,MAAM;EAEvB,MAAO;IACN,SAAS,EAAE,IAAI;IACf,UAAU,EAAE,IAAI;IAChB,KAAK,EAAE,MAAM",
+"sources": ["simple1.scss"],
+"names": [],
+"file": "simple1.css"
+}

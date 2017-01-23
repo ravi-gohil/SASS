@@ -1,0 +1,8 @@
+$font-size: 10px + 20px;
+
+$style: (color : green);
+.container{
+@debug $style;
+@debug $font-size ;
+color: green;
+}

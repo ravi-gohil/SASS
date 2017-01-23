@@ -1,0 +1,37 @@
+h3 {
+  color: #DE5E85; }
+
+body {
+  font: 100% hevetica, sans-serif;
+  background-image:url("C:\Users\Mtech\LESS\tiger.jpg");
+  color: pink; }
+
+.clr, p, h2, nav ul {
+  color: green !important;
+  font-size: 66.66667;
+  opacity: 0.6;
+  padding-right: 8px; }
+
+p, h2 {
+  color: pink; }
+
+h1 {
+  color: #AF80ED; }
+  h1:after {
+    content: "My font is: sans-serif."; }
+
+.btn {
+  background-color: lightgreen; }
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+nav li {
+  display: inline-block; }
+nav a {
+  display: block;
+  padding: 0;
+  text-decoration: none; }
+
+/*# sourceMappingURL=style.css.map */
